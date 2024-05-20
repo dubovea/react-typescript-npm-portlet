@@ -1,90 +1,55 @@
-.react-typescript-portlet {
-  .card {
-    border: 1px solid #eee;
-  }
+.blog-component {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 406px);
+    gap: 32px;
+    .card {
+      border: 1px solid #c5bf98;
+      box-shadow: 0px 6px 12px 0px rgba(58, 44, 6, 0.4);
+      /* Автолейаут */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0px;
 
-  .card-title.big-title {
-    font-size: 1.6em;
-  }
-
-  .users-pagination-btns {
-    cursor: pointer;
-    align-items: center;
-    border-radius: 4px;
-    border-color: transparent;
-    border-style: solid;
-    border-width: .0625rem;
-    color: #6b6c7e;
-    display: inline-flex;
-    height: 2rem;
-    justify-content: center;
-    line-height: 1;
-    margin-left: 0;
-    padding-bottom: 0;
-    padding-left: .625rem;
-    padding-right: .625rem;
-    padding-top: 0;
-    position: relative;
-    transition: box-shadow .15s;
-    margin-right: 5px;
-  }
-
-  .users-pagination-btns:hover {
-    border-color: transparent;
-    color: #272833;
-    text-decoration: none;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.02);
-  }
-
-  .current-page {
-    margin-right: 5px;
-    border-color: transparent;
-    color: #272833;
-    cursor: default;
-    z-index: 3;
-    background-color: rgba(0, 0, 0, 0.04);
-  }
-
-  .icon-angle:not(.disabled):hover {
-    border-color: transparent;
-    color: #272833;
-    text-decoration: none;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 0.02);
-    cursor: pointer;
-  }
-
-  .card.user-card.card-type-asset:hover {
-    box-shadow: 0 0 0 2px #80acff;
-  }
-
-  .icon-angle {
-    align-items: center;
-    border-radius: 4px;
-    border-color: transparent;
-    border-style: solid;
-    border-width: .0625rem;
-    color: #6b6c7e;
-    display: inline-flex;
-    height: 2rem;
-    justify-content: center;
-    line-height: 1;
-    margin-left: 0;
-    padding-bottom: 0;
-    padding-left: .625rem;
-    padding-right: .625rem;
-    margin-right: 5px;
-  }
-
-  .disabled {
-    background-color: transparent;
-    border-color: transparent;
-    box-shadow: none;
-    color: #6b6c7e;
-    cursor: not-allowed;
-    opacity: .5;
-    pointer-events: auto;
-    z-index: 0;
+      .card__image {
+        background: url("../assets/images/image.svg") no-repeat center center;
+        height: 260px;
+        width: 100%;
+      }
+      .card__info {
+        position: relative;
+        height: 242px;
+        padding: 14px 24px 24px 24px;
+        color: white;
+        .card__title {
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 140%;
+        }
+        .card__desc {
+          margin-top: 8px;
+          color: rgb(221, 221, 221);
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 4; // Определяем количество строк перед достижением многоточия
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 150%;
+        }
+        .card__footer {
+          position: absolute;
+          width: 90%;
+          bottom: 0;
+          color: rgb(175, 175, 175);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
   }
 }

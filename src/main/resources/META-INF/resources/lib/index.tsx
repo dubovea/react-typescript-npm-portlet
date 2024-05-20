@@ -5,7 +5,7 @@ import App from "./App";
 if (window.location.port === "5173") {
   ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-      <App title="React + Typescript portlet sample" />
+      <App />
     </React.StrictMode>
   );
 }
@@ -21,7 +21,7 @@ export default function (elementId: string) {
 
   root.render(
     <React.StrictMode>
-      <App title="React + Typescript portlet sample" />
+      <App />
     </React.StrictMode>
   );
 }

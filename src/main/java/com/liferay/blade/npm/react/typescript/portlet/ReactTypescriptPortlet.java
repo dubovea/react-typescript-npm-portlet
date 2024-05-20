@@ -16,7 +16,7 @@ import org.osgi.service.component.annotations.Reference;
 @Component(
 	immediate = true,
 	property = {
-		"com.liferay.portlet.css-class-wrapper=react-typescript-portlet",
+		"com.liferay.portlet.css-class-wrapper=blog-component",
 		"com.liferay.portlet.display-category=category.sample",
 		"com.liferay.portlet.header-portlet-css=/css/index.css",
 		"com.liferay.portlet.instanceable=true",
@@ -36,7 +36,7 @@ public class ReactTypescriptPortlet extends MVCPortlet {
 
 		renderRequest.setAttribute(
 			"mainRequire",
-			_npmResolver.resolveModuleName("react-typescript-portlet") + " as main");
+			_npmResolver.resolveModuleName("blog-component") + " as main");
 
 		super.doView(renderRequest, renderResponse);
 	}
